@@ -7,11 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SecretComponent {
 
-  fathers = 'Alexis';
-  count = 0; 
-  total = [];
-  buttonPushed = false;
-
+  showSecret = false;
+  log = [];
 
   constructor() { 
   
@@ -22,9 +19,8 @@ export class SecretComponent {
   }
 
   onButtonPush() {
-    this.buttonPushed = true;
-    this.total.push(this.count = this.count + 1)
-    console.log(this.total)
+    this.showSecret = !this.showSecret;
+    this.log.push(this.log.length + 1)
 
   }
 }
